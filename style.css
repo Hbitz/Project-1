@@ -27,7 +27,7 @@ img {
 .image{
     flex: 1;
 }        
-/* Om width på skärmen är större än 600px så gör om flex-direction till en single kolumn */
+
 nav {
     background: #494949;
     padding: 10px 0;
@@ -54,7 +54,7 @@ ul.navbar li a:hover {
 }
 
 .cv-section {
-    background-color: #e6e6fa; /* Ljuslila bakgrund */
+    background-color: #e6e6fa; 
     padding: 32px 24px;
     border-radius: 12px;
     max-width: 900px;
@@ -85,14 +85,35 @@ ul.navbar li a:hover {
     font-size: 0.95em;
     font-style: italic;
 }
+
+/* The two stylesettings below adjusts so we have two "card"-areas on larger screens.
+    Instead of having it all vertical and not utilizing right half of screen, we have this solution
+    Not the cleanest, maybe better? */
+
+.text ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.text ul li {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+    
+
 .text ul li img {
-    height: 300px;   /* Ändra till önskad höjd, t.ex. 20px */
-    width: auto;    /* Behåll proportioner */
+    height: 300px;  
+    width: auto;    
     margin-left: 8px;
     vertical-align: middle;
 }
 .project-img {
-    height: 180px; /* Skalar ner till ca 50% av 32px */
+    height: 180px; 
     width: auto;
     margin-left: 8px;
     vertical-align: middle;
@@ -101,5 +122,11 @@ ul.navbar li a:hover {
 @media (max-width: 600px) { 
     .container {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .text ul {
+        grid-template-columns: 1fr;
     }
 }
