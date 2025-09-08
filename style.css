@@ -91,6 +91,12 @@ ul.navbar li a:hover {
     margin-left: 8px;
     vertical-align: middle;
 }
+.project-img {
+    height: 180px; /* Skalar ner till ca 50% av 32px */
+    width: auto;
+    margin-left: 8px;
+    vertical-align: middle;
+}
         
 @media (max-width: 600px) { 
     .container {
